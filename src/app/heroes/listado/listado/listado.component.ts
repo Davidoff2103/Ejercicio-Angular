@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ListadoComponent {
   heroes: string[] = ['Spiderman', 'Superman', 'IronMan', 'Batman', 'Hulk'];
+  borrado: string = "";
+
+  borrarHeroe(){
+    if(this.heroes.length == 0){
+      this.borrado = '';
+    } else{
+      this.borrado = this.heroes[0];
+    }
+    this.heroes.splice(0,1);
+  }
 }
