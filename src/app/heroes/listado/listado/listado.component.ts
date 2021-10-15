@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class ListadoComponent {
   heroes: string[] = ['Spiderman', 'Superman', 'IronMan', 'Batman', 'Hulk'];
   borrado: string = "";
+  seleccionado: string = "";
 
   borrarHeroe(){
     if(this.heroes.length == 0){
@@ -16,5 +17,13 @@ export class ListadoComponent {
       this.borrado = this.heroes[0];
     }
     this.heroes.splice(0,1);
+  }
+  seleccionHeroe(heroe: string) {
+    this.seleccionado = heroe;
+  }
+  resetearLista(){
+    this.heroes = ['Spiderman', 'Superman', 'IronMan', 'Batman', 'Hulk'];
+    this.borrado = "";
+    this.seleccionado = "";
   }
 }

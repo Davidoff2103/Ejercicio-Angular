@@ -7,9 +7,9 @@
 
 html,
 body {
-  background: white;
+  background: gainsboro;
   margin: 20px;
-  color: #3e4144;
+  color: black;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -38,4 +38,41 @@ button:focus {
 
 .p-1 {
   padding: 1px;
+}
+
+.list-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 2vh;
+  width: 500px;
+}
+.list-group-item:first-child {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 2px solid black;
+  cursor:pointer;
+  background-color: lightgray;
+}
+
+.list-group-item:hover {
+  background-color: black;
+  color: white;
+}
+
+.list-group-item::selection {
+  background-color: black;
+  color: white;
 }
