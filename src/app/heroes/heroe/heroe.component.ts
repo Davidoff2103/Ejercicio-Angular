@@ -12,7 +12,7 @@ export class HeroeComponent {
         return 'Su nombre es '+this.nombre+' y tiene '+ this.edad + ' años.';
     }
     nombreMayus(){
-        return 'Su nombre en mayúsculaes es '+this.nombre.toUpperCase()+'.';
+        return 'Su nombre en mayúsculas es '+this.nombre.toUpperCase()+'.';
     }
     cambiarNombre(){
         this.nombre = 'Jorgito';
