@@ -1,0 +1,13 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let personaje of Personajes">Nombre: {{ personaje.nombre }}<br><br>Poder: {{ personaje.poder }}</li>
+</ul>
+
+<form #itemForm="ngForm" (ngSubmit)="nuevoPersonaje(itemForm)">
+    <label for="nombre">Nombre: </label>
+    <input class="form-control" name="nombre" ngModel required /><br><br>
+
+    <label for="poder">Poder: </label>
+    <input class="form-control" name="poder" ngModel required /><br><br>
+    
+    <button type="submit">Submit</button>
+</form>
