@@ -1,0 +1,9 @@
+<form (ngSubmit)="nuevoPersonaje()">
+    <label for="nombre">Nombre: </label>
+    <input class="form-control" name="nombre" type="text" [(ngModel)]="personajeNuevo.nombre" /><br><br>
+
+    <label for="poder">Poder: </label>
+    <input class="form-control" name="poder" type="number" min="0" [(ngModel)]="personajeNuevo.poder" /><br><br>
+    
+    <button type="submit">Submit</button>
+</form>

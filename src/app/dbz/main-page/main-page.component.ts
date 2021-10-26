@@ -1,9 +1,5 @@
-import {
-  Component
-} from '@angular/core';
-import {
-  NgForm
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { Personaje } from '../interfaces/dbz.interfaces';
 
 @Component({
   selector: 'app-main-page',
@@ -31,18 +27,10 @@ export class MainPageComponent {
     poder: 97
   };
 
-  Personajes: Personaje[] = [this.personaje1, this.personaje2, this.personaje3, this.personaje4];
+  personajes: Personaje[] = [this.personaje1, this.personaje2, this.personaje3, this.personaje4];
 
-  nuevoPersonaje(itemForm: NgForm) {
-    let personajeNuevo: Personaje = {
-      nombre: itemForm.value.nombre,
-      poder: itemForm.value.poder
-    };
-    this.Personajes.push(personajeNuevo);
-  };
-};
+  agregarPersonaje(data: Personaje){
+    this.personajes.push(data);
+  }
 
-interface Personaje {
-  nombre: string,
-    poder: number
 };
